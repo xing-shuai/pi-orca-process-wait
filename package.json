@@ -1,0 +1,49 @@
+{
+  "name": "pi-orca-process-wait",
+  "version": "0.1.0",
+  "description": "Pi extension bridging @aliou/pi-processes background tasks to Orca agent status and session liveness, preventing premature idle state and early worker-stopped reports.",
+  "type": "module",
+  "license": "MIT",
+  "author": "xing-shuai",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "orca",
+    "pi-processes",
+    "orchestration"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xing-shuai/pi-orca-process-wait.git"
+  },
+  "homepage": "https://github.com/xing-shuai/pi-orca-process-wait#readme",
+  "bugs": {
+    "url": "https://github.com/xing-shuai/pi-orca-process-wait/issues"
+  },
+  "files": [
+    "extensions/orca-process-wait-bridge.ts",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/orca-process-wait-bridge.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=1.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/orca-process-wait-bridge.test.mjs"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
